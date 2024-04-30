@@ -9,10 +9,10 @@ class Player
 
 	def answer_question(answer)
 		if answer == true
-			puts "#{@name}: YES! You are correct."
+			puts " \e[32m #{@name}: YES! You are correct. \e[0m "
     else
       lose_life
-      puts "#{@name}: Seriously? No!"
+      puts " \e[31m #{@name}: Seriously? No! \e[0m "
 		end
 	end
 
