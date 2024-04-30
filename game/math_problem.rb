@@ -1,11 +1,12 @@
 class MathProblem
 
 	def initialize
-		@number1 = rand(1..20)
-		@number2 = rand(1..20)
+		generate_problem
 	end
 
 	def generate_problem
+		@number1 = rand(1..20)
+    @number2 = rand(1..20)
 		"#{@number1} plus #{@number2}"
 	end
 
