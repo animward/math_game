@@ -4,4 +4,9 @@
 
 3. Game
 
-Role: The Player class represents a player in the game. It encapsulates the state and behavior related to each player, such as their name and remaining lives, as well as actions like answering math problems and losing lives
+-----
+Role:
+The Player class represents a player in the game. It encapsulates the state and behavior related to each player, such as their name and remaining lives, as well as actions like answering math problems and losing lives
+-----
+
+-----
