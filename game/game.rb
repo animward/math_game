@@ -11,9 +11,12 @@ class Game
 	end
 
 	def start_game
-		puts "Welcome to the Math Game!"
+		puts " \e[92m Starting Game... \e[0m "
+		sleep(1.4)
+		puts
 		until game_over?
-			puts "----- NEW TURN -----"
+			sleep(1)
+			puts " \e[36m ----- NEW TURN ----- \e[0m "
 			puts "#{current_player.name}: What does #{math_problem.generate_problem}"
 			answer = gets.chomp.to_i
 			correct_answer = math_problem.check_answer(answer)
@@ -33,14 +36,23 @@ class Game
 		end
 	
 		def display_scores
-			puts "P1: #{player1.lives}/3 vs P2: #{player2.lives}/3"
+			sleep(1)
+			puts " \e[33m ----- SCOREBOARD ----- \e[0m "
+			puts "#{player1.name}: #{player1.lives}/3 vs #{player2.name}: #{player2.lives}/3"
+			puts
 		end
-	
 		def announce_winner
 			winner = (@player1.lives == 0) ? @player2 : @player1
-			puts "#{winner.name} wins with a score of #{winner.lives}/3"
-			puts "----- GAME OVER -----"
-			puts "Good bye!"
+			sleep(1)
+			puts "\e[92m #{winner.name} wins with a score of #{winner.lives}/3 \e[0m "
+			puts
+			sleep(1)
+			puts " \e[91m ----- GAME OVER ----- \e[0m "
+			puts
+			sleep(1)
+			puts "\e[35m Good bye! \e[0m"
+			puts
+			sleep(3)
 		end
 	
 		private
