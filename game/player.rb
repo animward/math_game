@@ -16,12 +16,7 @@ class Player
 		end
 	end
 
-
-
-
-
-
-
-
-
+	def lose_life
+		@lives -= 1
+	end
 end
